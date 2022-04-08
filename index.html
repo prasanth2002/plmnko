@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+    <style>
+       html{
+           scroll-behavior: smooth;
+       }
+        body {
+            background-color: black;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .header {
+            width: 5%;
+            font-family: 'Poppins', sans-serif;
+            font-size: x-large;
+            margin-top: 25px;
+            color: #ffff;
+            font-family: 'Bellefair', serif;
+        }
+
+
+        @media screen and (max-width:700px) {
+            .header {
+                margin-left: 43%;
+            }
+
+        }
+
+        @media only screen and (max-width:830px) {
+            .header {
+                margin-left: 43%;
+            }
+        }
+
+        .icon {
+            float: right;
+            padding-right: 15px;
+            margin-top: -30px;
+            cursor: pointer;
+            color: #ffff;
+            visibility: hidden;
+
+        }
+
+        @media only screen and (max-width:700px) {
+            .icon {
+                visibility: visible;
+            }
+        }
+
+        @media only screen and (max-width:830px) {
+            .icon {
+                visibility: visible;
+            }
+
+        }
+
+        .nav1 {
+            color: #ffff;
+            text-align: center;
+            margin-top: -45px;
+            justify-content: space-around;
+        }
+
+        .nav1 ul li {
+            font-family: 'Bellefair', serif;
+            font-size: large;
+            display: inline;
+            padding-left: 70px;
+            list-style: none;
+        }
+
+        .nav1 ul li a {
+
+            color: #ffff;
+            text-decoration: none;
+        }
+
+        .nav1 ul li :hover {
+
+            color: #ffbd39;
+            border-radius: 10px;
+            width: 10px;
+            height: auto;
+        }
+
+        .nav2 {
+            color: #ffff;
+            text-align: center;
+        }
+
+        .nav2 ul li {
+            font-family: 'Poppins', sans-serif;
+            font-size: large;
+            list-style-type: none;
+            margin-top: 15px;
+        }
+
+        .nav2 ul li:hover {
+            text-decoration: underline;
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        .nav2 ul li a {
+
+            color: #ffff;
+            text-decoration: none;
+
+        }
+
+        .nav2-show {
+
+            width: 100%;
+            visibility: hidden;
+            color: rgb(3, 3, 3);
+
+
+
+        }
+
+        @media only screen and (max-width:700px) {
+            .nav1 ul li {
+                visibility: hidden;
+            }
+
+            .nav2-show {
+
+
+                visibility: visible;
+
+            }
+        }
+
+        @media only screen and (max-width:830px) {
+            .nav1 {
+                visibility: hidden;
+            }
+
+            .nav2-show {
+
+
+                visibility: hidden;
+
+            }
+
+
+        }
+
+        @media only screen and (min-width:830px) {
+            .nav2 a {
+                visibility: hidden;
+            }
+
+        }
+
+        @media only screen and (min-width:830px) {
+            .nav2 a {
+                visibility: hidden;
+
+            }
+
+        }
+
+        .main-text {
+            color: rgb(17, 16, 16);
+            background-color: aliceblue;
+            font-size: 4vh;
+            width: 68.5%;
+            height: 90vh;
+            letter-spacing: 5px;
+            line-height: 45px;
+            padding-right: 45%;
+            position: absolute;
+            margin-top: -9%;
+            font-family: 'Cinzel', serif;
+            padding-left: 25%;
+
+
+        }
+
+        .main-text h1 {
+            position: absolute;
+            top: 35%;
+            font-size: 6vh;
+        }
+
+        .main-text h3 {
+            position: absolute;
+            color: rgb(255, 19, 19);
+            top: 45%;
+        }
+
+        @media only screen and (max-width:900px) {
+            .main-text {
+                width: 100%;
+            }
+
+        }
+
+        .banner {
+            position: relative;
+            float: right;
+            margin-top: -9%;
+            background-color: aliceblue;
+            width: fit-content;
+
+        }
+
+        @media only screen and (max-width:800px) {
+            .banner {
+                margin-top: 100%;
+                width: 100%;
+                background-color: aliceblue;
+            }
+        }
+
+
+        .abt {
+            position: relative;
+            padding-top: 38%;
+            color: aliceblue;
+            margin-left: 5%;
+
+        }
+
+        .abt h3 {
+            margin-top: -28%;
+            margin-left: 25%;
+        }
+
+        .abt2 {
+            margin-left: 25%;
+        }
+
+        .li1 {
+            margin-left: 25%;
+        }
+
+        .li1 li {
+            list-style: inside;
+            line-height: 80px;
+            font-size: large;
+        }
+
+        .li1 li b {
+            font-size: x-large;
+            font-family: poppins, sans-serif;
+        }
+
+        .li2 {
+            margin-left: 60%;
+            margin-top: -20%;
+            line-height: 50px;
+
+        }
+
+        .li2 li {
+            list-style: inside;
+            line-height: 100px;
+            font-size: large;
+        }
+
+        .li2 li b {
+            font-size: x-large;
+            font-family: Verdana;
+        }
+        
+        .abt{
+           
+            float: right;
+            margin-left: 25%;
+            margin-top: -35%;
+            line-height: 45px;
+        }
+        @media only screen and (max-width:700px){
+            .abt{
+                position:absolute;
+                margin-top: -5%;
+            }
+            
+        }
+        .bg2{
+            position: relative;
+            height: 30vh;
+            width: 10%;
+            margin-top:38%;
+        
+        }
+        @media only screen and(max-width:700px) 
+        {
+            .bg2
+            {
+                position: relative;
+                width: 100%;
+                margin-top: -10%;
+            }
+            
+        }
+        .big{
+            position: relative;
+            margin-top: -5px;
+        }
+        .big1{
+            position: absolute;
+            font-size: 18vh;
+            opacity: 0.1;
+          
+        }
+        .bt2{
+            position: relative;
+            margin-left: 40%;
+        }
+        #resume-section{
+            margin-top: 55px;
+        }
+        .resume{
+            border: 0.5px solid aliceblue;
+            color: aliceblue;
+            background-color:#302d2d;
+            border-radius: 15px;
+            width:100%;
+        }
+        .university{
+            border: 0.5px solid aliceblue;
+            color: aliceblue;
+            background-color:#302d2d;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            
+        }
+        .school{
+            border: 0.5px solid aliceblue;
+            color: aliceblue;
+            background-color:#302d2d;
+            border-radius: 15px;
+        }
+        .i3{
+            margin-top: -115%;
+        }
+      
+        .txt2
+        {
+            color: white;
+          margin-top: -15px;
+          text-align: right;
+          
+        }
+        
+
+        /* footer */
+
+        .list-unstyled li a
+        {
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .ft ul li {
+            list-style:none;
+
+        }
+        .ft ul li a {
+            text-decoration: none;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <header> <a href=""> PRASANTH </a></header>
+    </div>
+    <img class="icon" id="click" src="image/hamburg.png" alt="" width="8%">
+    <nav class="nav1">
+        <ul>
+
+            <li><a href="">Home</a></li>
+            <li><a href="#ab">About</a></li>
+            <li><a href="#re">Resume</a></li>
+            <li><a href="#ad">Additional Qualification</a></li>
+            <li><a href="#pr">Project</a></li>
+        </ul>
+    </nav>
+    <nav class="nav2" id="navshow">
+        <ul>
+            <li><a href=""> Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Resume</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Project</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-text">
+        <h1> PRASANTH</h1>
+        <h3> <span class="auto-text"></span></h3>
+    </div>
+    <div class="banner">
+        <img src="image/ee.png" alt="" style="height:90vh; background-attachment: fixed;">
+
+    </div>
+
+
+
+
+
+  
+    <div class="abt" style="width: 60%;">
+
+
+    <h1 class="big" id="ab">About</h1>
+    <h1  class="big1" > About</h1>
+
+    <hr>
+  <h2 class="">About Me</h2>
+
+  <ul class="about-info mt-4 px-md-0 px-2 animate__animated animate__backInRight">
+      <li class="d-flex"><span>Name:</span> <span>Prasanth</span></li>
+      <li class="d-flex"><span>Date of birth:</span> <span>April 20, 2002</span></li>
+      <li class="d-flex"><span>Address:</span> <span>No 1/13 MettuStreet Senneerkuppam Poonamallee</span></li>
+      <li class="d-flex"><span>Zip code:</span> <span>600056</span></li>
+      <li class="d-flex"><span>Email:</span> <span>hariprasanth.d2002@gmail.com</span></li>
+      <li class="d-flex"><span>Phone: </span> <span>+91 7904195381</span></li>
+  </ul>
+</div>
+<div class="bg2 animate__animated animate__backInLeft" >
+    <img src="image/RR.jpg" alt="" style="height: 55vh; margin-left: 80%;">
+</div>
+<a href="Resume/prasanth resume-converted.pdf" download>
+    <button class="btn btn-primary bt2"> Download CV</button>
+</a>
+
+
+<section class="ftco-section ftco-no-pb animate__animated animate__slideInUp" id="resume-section">
+    <div class="container" id="re">
+        <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+          <h1 class="big big-2" style="color: aliceblue;">Resume</h1>
+        <h2 class="mb-4" style="font-size: 10vh;">Resume</h2>
+        <p  style="color: aliceblue;"> A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+      </div>
+    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="resume-wrap ftco-animate resume">
+                    <span class="date" style="color: #ffbd39; font-size: 3vh; text-align: center;" >2019-2022</span>
+                    <h2>Bachlor Of Computer Application</h2>
+                    <span class="position ">D.G VaishnavCollege</span>
+                    <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                </div>
+                <div class="resume-wrap ftco-animate university">
+                    <span class="date"  style="color: #ffbd39;  font-size: 3vh;">2017-2019</span>
+                    <h2>Higher Scondary Education</h2>
+                    <span class="position">Christ Matriculation Hr.Sec School</span>
+                    <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                </div>
+                <div class="resume-wrap ftco-animate school">
+                    <span class="date"  style="color: #ffbd39;  font-size: 3vh;">2016-2017</span>
+                    <h2>secondary school</h2>
+                    <span class="position">Karthick Matriculation Hr.Sec School</span>
+                    <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                </div>
+                
+
+
+                <section class="ftco-section ftco-no-pb" style="color: aliceblue;" id="resume-section">
+                    <div class="container" id="ad">
+                        <div class="row justify-content-center pb-5">
+                      <div class="col-md-10 heading-section text-center ftco-animate">
+                          <h1 class="big big-2" style="color: aliceblue; margin-top: 25px;">Additional Qualification</h1>
+                        <h2 class="mb-4" style="font-size: 9vh; opacity: 0.1;" >Additional Qualification</h2>
+                        <p  style="color: aliceblue;"> A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                      </div>
+                    </div>
+                        <div class="row" style="margin-top: -55px;">
+                            <div class="col-md-12">
+                                <div class="resume-wrap ftco-animate resume">
+                                    <span class="date" style="color: #ffbd39; font-size: 3vh; text-align: center;" >2019-2022</span>
+                                    <h2>Bachlor Of Computer Application</h2>
+                                    <span class="position ">D.G VaishnavCollege</span>
+                                    <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                                </div>
+                                <div class="resume-wrap ftco-animate university">
+                                    <span class="date"  style="color: #ffbd39;  font-size: 3vh;">2017-2019</span>
+                                    <h2>Higher Scondary Education</h2>
+                                    <span class="position">Christ Matriculation Hr.Sec School</span>
+                                    <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                                </div>
+                                <div class="resume-wrap ftco-animate school">
+                                    <span class="date"  style="color: #ffbd39;  font-size: 3vh;">2016-2017</span>
+                                    <h2>secondary school</h2>
+                                    <span class="position">Karthick Matriculation Hr.Sec School</span>
+                                    <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                                </div>
+                                <div class="col-md-10 heading-section text-center ftco-animate">
+                                    <h1 class="big big-2"  style="font-size: 10vh;opacity: 0.1; margin-right: -155px;" > Projets</h1>
+                                  <h2 class="mb-4" style="color: aliceblue; margin-right: -155px;">Projects</h2>
+                                  <p  style="color: aliceblue;"> A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                                </div>
+                               
+                               
+                                <h2 class="txt1 col-md-4"style="color: aliceblue; " id="pr" >  E-Commerce Website</h2>
+                                <h2 class="txt2 col-md-10"> Landing page</h2>
+                               <a href="E-Commerce website/index.HTML" target="_blank"> <img  class="col-md-6" src="image/project 1.png" alt=""> </a>
+                                
+                              
+                                <a href="image/venom.png" target="=_blank"> <img class="col-md-5 i3" src="image/venom.png" alt="" width="50%"></a>
+
+                                <footer class="ftco-footer ftco-section">
+                                    <div class="container" >
+                                      <div class="row mb-5">
+                                        <div class="col-md">
+                                          <div class="ftco-footer-widget mb-4">
+                                            <h2 class="ftco-heading-2">About</h2>
+                                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                                              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                                              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                                              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                        <div class="col-md">
+                                          <div class="ftco-footer-widget mb-4 ml-md-4">
+                                            <h2 class="ftco-heading-2">Links</h2>
+                                            <ul class="list-unstyled">
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                        <div class="col-md">
+                                           <div class="ftco-footer-widget mb-4">
+                                            <h2 class="ftco-heading-2">Services</h2>
+                                            <ul class="list-unstyled">
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
+                                              <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                        <div class="col-md">
+                                          <div class="ftco-footer-widget mb-4">
+                                              <h2 class="ftco-heading-2">Have a Questions?</h2>
+                                              <div class="block-23 mb-3 ft">
+                                                <ul>
+                                                  <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                                                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                                                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                                                </ul>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-md-12 text-center">
+                              
+                                          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This  is made  <i class="icon-heart color-danger" aria-hidden="true"></i> by prasanth
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </footer>
+                                  
+
+                                
+    <script>
+        const i = document.getElementById("click");
+        const s = document.getElementById("navshow");
+        i.addEventListener("click", function () {
+
+            s.classList.toggle("nav2-show")
+        })
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+
+        var options = {
+            strings: ['I"m Web Developer', 'And  Web designer'],
+            typeSpeed: 40,
+            loop: true,
+        };
+
+        var typed = new Typed('.auto-text', options);
+    </script>
+
+</body>
+
+
+</html>
